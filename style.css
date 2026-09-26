@@ -159,39 +159,6 @@ hr {
   color: var(--ink-2);
 }
 
-/* Practice */
-
-.practice {
-  padding: 80px var(--gutter);
-  display: grid;
-  grid-template-columns: 220px minmax(0, 1fr);
-  gap: 56px;
-}
-
-.label {
-  font-size: 13px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--ink-3);
-}
-
-.practice .lead {
-  max-width: 700px;
-  font-family: var(--serif);
-  font-size: 21px;
-  line-height: 1.6;
-}
-
-.practice .lead a { text-decoration: none; border-bottom: 1px solid var(--rule-2); }
-
-.practice p + p {
-  margin-top: 26px;
-  max-width: 700px;
-  font-size: 16px;
-  line-height: 1.7;
-  color: var(--ink-2);
-}
-
 /* Footer */
 
 .site-footer {
@@ -251,11 +218,6 @@ hr {
     padding: 56px var(--gutter);
   }
 
-  .practice {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 56px var(--gutter);
-  }
 }
 
 /* Phone — follows the mobile board */
@@ -276,10 +238,6 @@ hr {
   .services h2 { margin: 10px 0 8px; font-size: 21px; }
   .services p { font-size: 15px; line-height: 1.65; }
 
-  .practice { padding: 36px var(--gutter) 40px; gap: 18px; }
-  .label { font-size: 12px; }
-  .practice .lead { font-size: 18px; line-height: 1.55; }
-  .practice p + p { margin-top: 18px; font-size: 15px; line-height: 1.65; }
 
   .site-footer {
     flex-direction: column;
