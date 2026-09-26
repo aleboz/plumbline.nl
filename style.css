@@ -94,8 +94,9 @@ hr {
 }
 .wordmark .bob {
   display: block;
+  width: 0.3em;   /* viewBox is 16 × 34, so 0.3 × 0.6 em keeps the board's proportions */
   height: 0.6em;
-  width: auto;
+  flex: none;
   fill: currentColor;
 }
 
