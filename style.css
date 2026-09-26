@@ -1,39 +1,302 @@
+/* Plumbline — one-page site
+   Ported from the design canvas "Plumbline — identity and site":
+   layout and copy from the Site boards, logotype direction D (bob shape 1). */
+
 :root {
-  --bg: #fbfaf7;
-  --fg: #1d1c1a;
-  --muted: #6b675f;
-  --accent: #8a5a2b;
+  --paper: #F3F1EC;
+  --paper-2: #FBFAF7;
+  --ink: #15181B;
+  --ink-2: #4A4E52;
+  --ink-3: #5A5E62;
+  --rule: #DCD6CA;
+  --rule-2: #C9C3B7;
+  --brass: #8F5F31;
+
+  --serif: Spectral, Georgia, "Times New Roman", serif;
+  --sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --grotesk: "Schibsted Grotesk", system-ui, -apple-system, sans-serif;
+
+  --gutter: 96px;
 }
-@media (prefers-color-scheme: dark) {
-  :root { --bg: #141312; --fg: #ebe7df; --muted: #a39d92; --accent: #d1a06b; }
-}
+
 * { box-sizing: border-box; }
-html, body { margin: 0; background: var(--bg); color: var(--fg); }
+
+html { -webkit-text-size-adjust: 100%; }
+
 body {
-  font-family: Georgia, "Times New Roman", serif;
-  line-height: 1.6;
-  font-size: 1.125rem;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
 }
-main {
-  max-width: 40rem;
-  margin: 0 auto;
-  padding: 6rem 1.25rem 4rem;
+
+a { color: var(--ink); }
+a:hover { color: var(--brass); }
+
+h1, h2, p { margin: 0; }
+
+hr {
+  border: 0;
+  height: 1px;
+  background: var(--rule);
+  margin: 0 var(--gutter);
 }
-h1 {
-  font-weight: normal;
-  font-size: 2.25rem;
-  letter-spacing: 0.04em;
-  margin: 0 0 0.5rem;
+
+/* Header */
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px var(--gutter) 0;
 }
-h1::after {
-  content: "";
+
+.wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  font-family: var(--grotesk);
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  color: var(--ink);
+  /* room for the drop below the baseline */
+  padding-bottom: 0.9em;
+  margin-bottom: -0.9em;
+}
+.wordmark:hover { color: var(--ink); }
+
+.wordmark .drop { position: relative; }
+
+.wordmark .plumb {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* line 0.45 em, bob 0.6 em tall */
+.wordmark .line {
   display: block;
-  width: 2px;
-  height: 3rem;
-  background: var(--accent);
-  margin: 1rem 0 1.5rem 0.1rem;
+  width: 1px;
+  height: 0.45em;
+  background: currentColor;
 }
-.tagline { font-size: 1.25rem; margin: 0 0 3rem; }
-section p { margin: 0 0 1.25rem; }
-a { color: var(--accent); }
-footer { margin-top: 4rem; color: var(--muted); font-size: 0.95rem; }
+.wordmark .bob {
+  display: block;
+  height: 0.6em;
+  width: auto;
+  fill: currentColor;
+}
+
+.contact {
+  font-size: 15px;
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule-2);
+  padding-bottom: 3px;
+}
+
+/* Hero */
+
+.hero { padding: 150px var(--gutter) 110px; }
+
+.hero h1 {
+  max-width: 880px;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 62px;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+.hero p {
+  margin-top: 36px;
+  max-width: 620px;
+  font-size: 19px;
+  line-height: 1.65;
+  color: var(--ink-2);
+}
+
+/* Services */
+
+.services {
+  padding: 80px var(--gutter);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 56px;
+}
+
+.num {
+  font-family: var(--serif);
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  color: var(--brass);
+}
+
+.services h2 {
+  margin: 18px 0 14px;
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 25px;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.services p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink-2);
+}
+
+/* Practice */
+
+.practice {
+  padding: 80px var(--gutter);
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 56px;
+}
+
+.label {
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.practice .lead {
+  max-width: 700px;
+  font-family: var(--serif);
+  font-size: 21px;
+  line-height: 1.6;
+}
+
+.practice .lead a { text-decoration: none; border-bottom: 1px solid var(--rule-2); }
+
+.practice p + p {
+  margin-top: 26px;
+  max-width: 700px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink-2);
+}
+
+/* Footer */
+
+.site-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 40px var(--gutter) 48px;
+  border-top: 1px solid var(--rule);
+}
+
+.site-footer .brand {
+  display: flex;
+  align-items: baseline;
+  gap: 26px;
+}
+
+.site-footer .name {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.site-footer .motto {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 17px;
+  color: var(--ink-2);
+}
+
+.site-footer .meta {
+  display: flex;
+  align-items: baseline;
+  gap: 26px;
+  font-size: 14px;
+  color: var(--ink-3);
+}
+
+.site-footer .meta a {
+  text-decoration: none;
+  color: var(--ink-3);
+}
+.site-footer .meta a:hover { color: var(--brass); }
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  :root { --gutter: 48px; }
+
+  .hero { padding: 110px var(--gutter) 80px; }
+  .hero h1 { font-size: 46px; }
+
+  .services {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 56px var(--gutter);
+  }
+
+  .practice {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 56px var(--gutter);
+  }
+}
+
+/* Phone — follows the mobile board */
+
+@media (max-width: 560px) {
+  :root { --gutter: 28px; }
+
+  .site-header { padding-top: 28px; }
+  .wordmark { font-size: 22px; }
+  .contact { display: none; }
+
+  .hero { padding: 64px var(--gutter) 48px; }
+  .hero h1 { font-size: 34px; line-height: 1.18; letter-spacing: -0.015em; }
+  .hero p { margin-top: 22px; font-size: 16px; }
+
+  .services { padding: 36px var(--gutter); gap: 30px; }
+  .num { font-size: 15px; }
+  .services h2 { margin: 10px 0 8px; font-size: 21px; }
+  .services p { font-size: 15px; line-height: 1.65; }
+
+  .practice { padding: 36px var(--gutter) 40px; gap: 18px; }
+  .label { font-size: 12px; }
+  .practice .lead { font-size: 18px; line-height: 1.55; }
+  .practice p + p { margin-top: 18px; font-size: 15px; line-height: 1.65; }
+
+  .site-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    padding: 24px var(--gutter) 32px;
+  }
+  .site-footer .brand { order: 2; justify-content: space-between; }
+  .site-footer .name { display: none; }
+  .site-footer .motto { font-size: 15px; }
+  .site-footer .meta { order: 1; flex-wrap: wrap; gap: 12px 18px; font-size: 13px; }
+  .site-footer .meta a {
+    width: 100%;
+    font-size: 16px;
+    color: var(--ink);
+    border-bottom: 1px solid var(--rule-2);
+    padding-bottom: 4px;
+    align-self: flex-start;
+    width: auto;
+  }
+}
