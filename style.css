@@ -68,35 +68,25 @@ hr {
   text-decoration: none;
   color: var(--ink);
   /* room for the drop below the baseline */
-  padding-bottom: 0.9em;
-  margin-bottom: -0.9em;
+  padding-bottom: 1.1em;
+  margin-bottom: -1.1em;
 }
 .wordmark:hover { color: var(--ink); }
 
 .wordmark .drop { position: relative; }
 
+/* The plumb line continues the stem of the i: same width (0.10 em in
+   Schibsted Grotesk 500), starting at the baseline. One SVG holds line
+   and bob so they share a centre. viewBox units are 0.01 em:
+   line 0.10 × 0.52, bob 0.34 wide × 0.75 tall. */
 .wordmark .plumb {
   position: absolute;
   left: 50%;
-  top: 100%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* line 0.45 em, bob 0.6 em tall */
-.wordmark .line {
+  top: calc(100% - 0.27em);   /* baseline is 0.26 em above the box bottom */
+  width: 0.4em;
+  height: 1.25em;
+  margin-left: -0.2em;
   display: block;
-  width: 1px;
-  height: 0.45em;
-  background: currentColor;
-}
-.wordmark .bob {
-  display: block;
-  width: 0.3em;   /* viewBox is 16 × 34, so 0.3 × 0.6 em keeps the board's proportions */
-  height: 0.6em;
-  flex: none;
   fill: currentColor;
 }
 
