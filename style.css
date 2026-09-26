@@ -73,24 +73,26 @@ hr {
 }
 .wordmark:hover { color: var(--ink); }
 
-.wordmark .drop { position: relative; }
-
-/* The plumb line continues the stem of the i: same width (0.10 em in
-   Schibsted Grotesk 500), starting at the baseline. One SVG holds line
-   and bob so they share a centre. viewBox units are 0.01 em:
-   line 0.10 × 0.52, bob 0.34 wide × 0.75 tall. */
+/* The i of "line" is drawn, not typeset: the real glyph stays in the text
+   for spacing, selection and copy, but is transparent, and one SVG draws
+   dot, stem, plumb line and bob in a single coordinate system so nothing
+   depends on how a browser rasterises type.
+   Geometry measured from Schibsted Grotesk 500; viewBox units are 0.01 em:
+   dot ø0.15 centred 0.68 above baseline, stem 0.10 wide × 0.525 tall,
+   line continues 0.52 below the baseline, bob 0.34 wide × 0.75 tall. */
+.wordmark .drop {
+  position: relative;
+  color: transparent;
+}
 .wordmark .plumb {
   position: absolute;
-  left: 50%;
-  top: calc(100% - 0.32em);   /* baseline is 0.26 em above the box bottom; overlap the stem by 0.05 em */
+  left: -0.073em;             /* stem centre sits 0.127 em into the glyph box; SVG is 0.4 em wide */
+  top: 0.0575em;              /* baseline is 0.8575 em below the box top; SVG top is 0.80 em above baseline */
   width: 0.4em;
-  height: 1.3em;
-  margin-left: -0.2em;
+  height: 2.05em;
   display: block;
-  fill: currentColor;
+  fill: var(--ink);
 }
-/* snap the straight parts to device pixels, as the glyphs are, so no antialiased fringe shows */
-.wordmark .plumb .stem { shape-rendering: crispEdges; }
 
 .contact {
   font-size: 15px;
