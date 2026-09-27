@@ -8,6 +8,8 @@
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://plumbline.nl/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://plumbline.nl/nl/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://plumbline.nl/it/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://plumbline.nl/zh/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://plumbline.nl/"/>
   </url>
   <url>
@@ -17,6 +19,30 @@
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://plumbline.nl/"/>
     <xhtml:link rel="alternate" hreflang="nl" href="https://plumbline.nl/nl/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://plumbline.nl/it/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://plumbline.nl/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://plumbline.nl/"/>
+  </url>
+  <url>
+    <loc>https://plumbline.nl/it/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://plumbline.nl/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://plumbline.nl/nl/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://plumbline.nl/it/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://plumbline.nl/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://plumbline.nl/"/>
+  </url>
+  <url>
+    <loc>https://plumbline.nl/zh/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://plumbline.nl/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://plumbline.nl/nl/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://plumbline.nl/it/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://plumbline.nl/zh/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://plumbline.nl/"/>
   </url>
 </urlset>

@@ -304,13 +304,10 @@ hr {
 /* Header right: language switch + contact */
 
 .header-right { display: flex; align-items: baseline; gap: 28px; }
-.lang {
-  font-size: 13px;
-  letter-spacing: 0.12em;
-  text-decoration: none;
-  color: var(--ink-3);
-}
-.lang:hover { color: var(--brass); }
+.lang { display: flex; gap: 14px; font-size: 13px; letter-spacing: 0.12em; }
+.lang a { text-decoration: none; color: var(--ink-3); }
+.lang a:hover { color: var(--brass); }
+.lang .current { color: var(--ink); }
 
 /* Questions */
 
