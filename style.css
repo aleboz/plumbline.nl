@@ -79,7 +79,7 @@ hr {
    depends on how a browser rasterises type.
    Geometry measured from Schibsted Grotesk 500; viewBox units are 0.01 em:
    dot ø0.15 centred 0.68 above baseline, stem 0.10 wide × 0.525 tall,
-   line continues 0.52 below the baseline, bob 0.34 wide × 0.75 tall. */
+   line continues 0.36 below the baseline, bob 0.34 wide × 0.75 tall. */
 .wordmark .drop {
   position: relative;
   color: transparent;
@@ -89,7 +89,7 @@ hr {
   left: -0.073em;             /* stem centre sits 0.127 em into the glyph box; SVG is 0.4 em wide */
   top: 0.0575em;              /* baseline is 0.8575 em below the box top; SVG top is 0.80 em above baseline */
   width: 0.4em;
-  height: 2.05em;
+  height: 1.89em;
   display: block;
   fill: var(--ink);
 }
