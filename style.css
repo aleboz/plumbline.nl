@@ -354,13 +354,16 @@ hr {
 }
 @media (max-width: 560px) { .label { font-size: 12px; } }
 
-/* Motto above the headline */
+/* Wordmark lockup with the motto */
 
-.eyebrow {
+.lockup { display: flex; align-items: baseline; gap: 18px; }
+.header-motto {
   font-family: var(--serif);
   font-style: italic;
-  font-size: 18px;
+  font-size: 17px;
   color: var(--ink-3);
-  margin: 0 0 22px;
+  padding-left: 18px;
+  border-left: 1px solid var(--rule-2);
+  line-height: 1;
 }
-@media (max-width: 560px) { .eyebrow { font-size: 16px; margin-bottom: 16px; } }
+@media (max-width: 700px) { .header-motto { display: none; } }
