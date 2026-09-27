@@ -353,3 +353,14 @@ hr {
   color: var(--ink-3);
 }
 @media (max-width: 560px) { .label { font-size: 12px; } }
+
+/* Motto above the headline */
+
+.eyebrow {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--ink-3);
+  margin: 0 0 22px;
+}
+@media (max-width: 560px) { .eyebrow { font-size: 16px; margin-bottom: 16px; } }
